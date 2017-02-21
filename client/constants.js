@@ -1,0 +1,2 @@
+export const INCREMENT_R2D2 = 'INCREMENT_R2D2'
+export const INCREMENT_BB8 = 'INCREMENT_BB8'
