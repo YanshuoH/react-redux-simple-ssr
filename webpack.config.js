@@ -10,6 +10,7 @@ const webpackConfig = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].dist.js',
+    publicPath: '/',
   },
   devServer: {
     inline: true,
@@ -31,7 +32,9 @@ const webpackConfig = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'client/index.html'),
       hash: true,
+      inject: 'body',
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   devtool: 'source-map',
 }
